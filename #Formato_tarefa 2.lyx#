@@ -1023,6 +1023,22 @@ Núm.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Implementación de Métodos de Integración Númerica en C++
 \end_layout
@@ -1258,7 +1274,7 @@ Los métodos implementados en la sección 2, serán evaluados empleando las
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1386,7 +1402,7 @@ f(x)=xSin(\frac{1}{x}); & x\in R\mid1/100\leq x\leq1/10\end{array}$
 \begin_inset Formula $f(x)=\begin{cases}
 2x+5 & 0\leq x<1/\pi\\
 \frac{-5\pi^{2}(x^{2}-2x-5)+10\pi x+2x}{1+5\pi^{2}} & 1/\pi\leq x<2/\pi\\
-2Sin(2x)+\frac{4+20\pi^{2}+25\pi^{3}}{\pi+5\pi^{3}}-2Sin(\frac{4}{\pi}) & 2/\pi\leq x\leq8\pi
+2Sin(2x)+\frac{4+20\pi^{2}+25\pi^{3}}{\pi+5\pi^{3}}-2Sin(\frac{4}{\pi}) & 2/\pi\leq x\leq8/\pi
 \end{cases}$
 \end_inset
 
@@ -4820,22 +4836,6 @@ T.
 
 \lang english
 \begin_inset VSpace defskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{titlepage}
-\end_layout
-
 \end_inset
 
 
