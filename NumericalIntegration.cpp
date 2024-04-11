@@ -26,7 +26,12 @@ double NumericalIntegration::DefinedIntegral(double x){
 }
 //Implementation of definite integral
 double NumericalIntegration::ValExact(double x1, double x2){
-    double area = DefinedIntegral(x2)- DefinedIntegral(x1);
+    double val1 = funcion(x1);
+    double val2 = funcion(x2);
+    double area = val2 - val1;
+    if(area <0.0){
+        std::cout<<"Area Negativa"<<std::endl;
+    }
     return area;
     }
 //Implementation according to the number of refinements

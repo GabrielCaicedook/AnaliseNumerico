@@ -1423,10 +1423,6 @@ f(x)=xSin(\frac{1}{x}); & x\in R\mid1/100\leq x\leq1/10\end{array}$
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -1555,13 +1551,7 @@ Función 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-\lang english
-\begin_inset Formula $\boldsymbol{h}$
-\end_inset
-
-
+nref
 \end_layout
 
 \end_inset
@@ -1723,8 +1713,6 @@ T.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 2
 \end_layout
 
@@ -1735,19 +1723,6 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\lang english
-2.22222
 \end_layout
 
 \end_inset
@@ -1775,8 +1750,15 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1786,8 +1768,6 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
 \end_layout
 
 \end_inset
@@ -3722,7 +3702,7 @@ Los resultados obtenidos empleando el metodo del trapecio, método de Gauss,
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4906,6 +4886,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename /Users/jose/Documents/GitHub/AnaliseNumerico_build/Debug/test.pdf
 
