@@ -283,6 +283,22 @@ begin{titlepage}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{plain}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Introducción
 \end_layout
@@ -341,17 +357,17 @@ La regla del trapezio es un método de integración que permite calcular el
 
  por el de la función líneal, que pasa atraves de los siguientes puntos:
  
-\series bold
+\shape italic
 1)
-\series default
+\shape default
  
 \begin_inset Formula $(a,f(a))$
 \end_inset
 
  y 
-\series bold
+\shape italic
 2)
-\series default
+\shape default
  
 \begin_inset Formula $(b,f(b)).$
 \end_inset
@@ -482,7 +498,7 @@ El método de Simpson 3/8, conocida como la segunda regla de Simpson se basa
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\int_{a}^{b}f(x)dx\thickapprox\frac{b-a}{8}[f(a)+3f(\frac{2a+b}{3})+f(b)]
+\int_{a}^{b}f(x)dx\thickapprox\frac{b-a}{8}[f(a)+3+3f(\frac{2a+b}{3})+f(\frac{a+2b}{3})+f(b)]
 \end{equation}
 
 \end_inset
@@ -557,7 +573,7 @@ X_{i}=(\frac{x_{i}+1}{2})(b-a)+a
 Donde:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula $w_{i}$
 \end_inset
 
@@ -565,7 +581,7 @@ Donde:
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -1024,15 +1040,265 @@ Núm.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
 
 
-\backslash
-end{titlepage}
 \end_layout
+
+\begin_layout Subsection
+Error
+\end_layout
+
+\begin_layout Standard
+El error se define como la diferencia entre la solución exacta y la solución
+ aproximada.
+ La ecuación 7 muestra el error para el método de Gauss Legendre.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+e=\mid\int_{a}^{b}f(x)dx-\sum_{i=1}^{n}W_{i}f(Xi)\mid
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Normal del error
+\end_layout
+
+\begin_layout Standard
+la normal del error es calculado utilizando la ecuación 8.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\parallel e\parallel=Ch^{p}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Donde:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $\parallel e\parallel$
+\end_inset
+
+ es la norma error.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+C es una constante que depende de los datos del problema.
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+h es el tamaño del elemento .
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+p es la tasa de convergencia.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para este trabajo, h se determina empleando la ecuación 9.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+h=\frac{(b-a)}{n_{el}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Donde:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $n_{el}$
+\end_inset
+
+ es el número de elementos o el número de intervalos en los que se divide
+ el dominio.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El número de elementos es calculado empleando la ecuación 10.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+n_{el}=2^{nref}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Tasa de convergencia.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para determinar la tasa de convergencia, es necesario aplicar el logaritmo
+ a la ecuación 8, como se muestra en la ecuación siguiente:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+Log(\parallel e\parallel)=Log(C)+pLog(h)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para el caso de estudio, la tasa de convergencia 
+\begin_inset Formula $p$
+\end_inset
+
+ se calcula en función los siguientes errores:
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ calculado en función de 
+\begin_inset Formula $h_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\lang english
+\begin_inset Formula $e_{i+1}$
+\end_inset
+
+ calculado en función de 
+\begin_inset Formula $h_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Empleando la ecuación 10 para 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ y 
+\begin_inset Formula $e_{i+1}$
+\end_inset
+
+, se obtienen las siguientes ecuaciones:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+Log\parallel e_{i}\parallel=Log(C)+pLog(h_{i})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+Log\parallel e_{i+1}\parallel=Log(C)+pLog(h_{i+1})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Se procede a realizar la resta de la ecuación (11) menos la ecuación (12),
+ con el objetivo de eliminar el término constante 
+\begin_inset Formula $C$
+\end_inset
+
+ y aislar el exponente 
+\begin_inset Formula $p$
+\end_inset
+
+, y así obtener la ecuación 13.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+p=\frac{Log(\parallel e_{i+1}\parallel/\parallel e_{i}\parallel)}{Log(h_{i+1}/h_{i})}
+\end{equation}
 
 \end_inset
 
@@ -1274,7 +1540,7 @@ Los métodos implementados en la sección 2, serán evaluados empleando las
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -1402,7 +1668,7 @@ f(x)=xSin(\frac{1}{x}); & x\in R\mid1/100\leq x\leq1/10\end{array}$
 \begin_inset Formula $f(x)=\begin{cases}
 2x+5 & 0\leq x<1/\pi\\
 \frac{-5\pi^{2}(x^{2}-2x-5)+10\pi x+2x}{1+5\pi^{2}} & 1/\pi\leq x<2/\pi\\
-2Sin(2x)+\frac{4+20\pi^{2}+25\pi^{3}}{\pi+5\pi^{3}}-2Sin(\frac{4}{\pi}) & 2/\pi\leq x\leq8\pi
+2Sin(2x)+\frac{4+20\pi^{2}+25\pi^{3}}{\pi+5\pi^{3}}-2Sin(\frac{4}{\pi}) & 2/\pi\leq x\leq8/\pi
 \end{cases}$
 \end_inset
 
@@ -1420,10 +1686,6 @@ f(x)=xSin(\frac{1}{x}); & x\in R\mid1/100\leq x\leq1/10\end{array}$
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1473,7 +1735,7 @@ Funciones a evaular empleando métodos numéricos
 
 \lang english
 \begin_inset Tabular
-<lyxtabular version="3" rows="7" columns="7">
+<lyxtabular version="3" rows="12" columns="7">
 <features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -1555,13 +1817,7 @@ Función 1
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\series bold
-\lang english
-\begin_inset Formula $\boldsymbol{h}$
-\end_inset
-
-
+nref
 \end_layout
 
 \end_inset
@@ -1723,8 +1979,6 @@ T.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
 2
 \end_layout
 
@@ -1735,19 +1989,6 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\lang english
-2.22222
 \end_layout
 
 \end_inset
@@ -1775,8 +2016,15 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1786,8 +2034,6 @@ T.
 
 \begin_layout Plain Layout
 
-\lang english
-2.22222
 \end_layout
 
 \end_inset
@@ -1798,8 +2044,71 @@ T.
 \begin_inset Text
 
 \begin_layout Plain Layout
+3
+\end_layout
 
-\lang english
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 4
 \end_layout
 
@@ -1865,9 +2174,267 @@ T.
 \begin_inset Text
 
 \begin_layout Plain Layout
+5
+\end_layout
 
-\lang english
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9
 \end_layout
 
 \end_inset
@@ -1932,9 +2499,7 @@ T.
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang english
-8
+10
 \end_layout
 
 \end_inset
@@ -3722,7 +4287,7 @@ Los resultados obtenidos empleando el metodo del trapecio, método de Gauss,
 placement H
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption Standard
@@ -4902,6 +5467,54 @@ Analisa-se o comportamento de campos vetoriais em função de seu rotacional
  é nulo quando existem duas regiões com uma magnitude rotacional igual,
  mas com sinais opostos; 4) O divergente é nulo quando a magnitude do fluxo
  de entrada é igual à magnitude do fluxo de saída.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/jose/Documents/GitHub/AnaliseNumerico_build/Debug/test.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
