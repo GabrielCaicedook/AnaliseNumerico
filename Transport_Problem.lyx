@@ -1,0 +1,1118 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language brazilian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/gabrielcaicedo/Downloads/LogoUnicamp.png
+	width 2cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+UNIVERSIDADE ESTADUAL DE CAMPINAS 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+FACULDADE DE ENGENHARIA MECÂNICA
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+ESTUDOS DIRIGIDOS
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+GABRIEL CAICEDO POTOSÍ 
+\end_layout
+
+\begin_layout Standard
+\align center
+RA:272605
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 7cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Campinas
+\end_layout
+
+\begin_layout Standard
+\align center
+2024
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Resumo
+\end_layout
+
+\begin_layout Standard
+ADD:
+\end_layout
+
+\begin_layout Enumerate
+Generalidades del problema de transporte 
+\end_layout
+
+\begin_layout Enumerate
+Aplicaciones e importacia 
+\end_layout
+
+\begin_layout Enumerate
+Enfoque del estudio (aplicación del problema de transporte en la simulación
+ del experimento de filtración)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+(Guía:1) Fundamentos/Generalidades; 2) Aplicación, 3) Formulación.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Los fenómenos de transporte en medios porosos son estudiados en multiples
+ disciplinas de la ingeniería.
+ En el campo de la ingeniería civil, por ejemplo, con el transporte de contamina
+ntes en los acuiferos, la propagación (transmisión) de las tensiones bajo
+ los cimientos de las estructuras.
+ En la ingeniería química se ocupa del transporte de masa y calor en columnas
+ de reactores de lecho compacto y procesos de secado.
+ En el campo de la ingeniería de yacimientos se emplean para el cálculo
+ del flujo de petróleo, gas y agua en los yacimientos hidrocarburíferos.
+ En estos ejemplos, las cantidades extensivas (cantidades que son aditivas
+ sobre vólumenes, con masa, energía, momentos), son transportadas por medio
+ de las fases sólidas y/o fluidas que juntas ocupan el dominio de un medio
+ poroso.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Solucionar un problema de transporte en un dominio determinado implica determina
+r las distribuciones espaciales y temporales de las variables de estado
+ (por ejemplo, densidad de masa, presión de una fase fluida, velocidad,
+ concentración en un soluto, entre otras), que han sido previamente seleccionada
+s para describir el estado del sistema material que ocupa dicho dominio.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Inicialmente, las ecuaciones que describen los fenómenos de transporte son
+ conocidas y pueden ser escritas a nivel macroscópico, en el cual es posible
+ determinar magnitudes continuas, y diferenciables y pueden formularse y
+ resolverse problemas de valores límite.
+ A este nivel, el enfoque es: qué ocurre desde un punto (matemático) al
+ interior de una fase prensente en el dominio de interes.
+ Incluso, es posible conocer las condiciones que se conservan en la superficie
+ que limita la fase.
+ Sin embargo, a nivel macroscópico, el sistema de ecuaciones no puede ser
+ resuelto, debido a que la geometría de la superficie que limita la fase
+ no es visible y/o es demasiado compleja para ser descrita.
+ Lo mismo pasa con las magnitudes específicas de las variables dentro de
+ la fase.
+ En consecuencia, la descripción y la solución del problema de transporte
+ a nivel macroscópico no es práctico.
+ Por lo tanto, es necesario otro nivel de descripción (
+\series bold
+add nivel
+\series default
+).
+ 
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+\lang english
+Medio poroso
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En la práctica se encuentra una gran variedad de materiales porosos, los
+ cuales pueden ser de origen natural o artifical, entre ellos, el suelo,
+ la roca fisurada, la arena, la arenisca cementada.
+ Los reservorios que producen hidrocarburos, las acuiferos de los que se
+ bombea agua subterránea, los filtros de arena empleados para purificar
+ el agua, son ejemplos adicionales de dominios de medios porosos.
+ Los ejemplos mencionados previamente tienen una parte del dominio que está
+ ocupada por una fase sólida, denominada matriz sólida.
+ La parte restante, conocida como espacio vacío, puede estar ocupada por
+ una por una única fase fluida o por varias fases fluidas, por ejemplo,
+ gas, agua y petróleo.
+ Esta fase es químicamente homogenea, está separada de otras fases por un
+ límite físico definido denominado interfaz o límite interfaz (add fig).
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Otra característica común de un dominio de medio poroso es que la fase sólida
+ (y, por lo tanto, también el espacio vacío) se distribuye por todo él.
+ Lo cual indica que si se toma muestras suficientemente grandes del material
+ poroso en diferentes lugares dentro de un dominio de medio poroso, encontraremo
+s una fase sólida en cada una de ellas.
+ Al mismo tiempo, es obvio que el tamaño de las muestras debe ser lo suficientem
+ente pequeño como para representar un vecindario lo suficientemente cercano
+ alrededor del punto (centro) de muestreo.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Por el momento, vamos a referirnos al volumen de una muestra que satisface
+ estas condiciones como Volumen Elemental Representativo (abreviado REV)
+ del dominio del medio poroso considerado en el punto dado.
+ En Subs.
+ El transporte de una cantidad extensiva considerada (por ejemplo, masa,
+ momento y energía) de una fase en un dominio de medio poroso puede tener
+ lugar a través de una única fase (fluida o sólida), a través de algunas
+ de las fases presentes en el dominio (posiblemente incluyendo la fase sólida);
+ o a través de todas ellas (
+\series bold
+ADD IMAGEN
+\series default
+).
+ 
+\end_layout
+
+\begin_layout Subsection
+Formulación del problema de transporte 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La ley de Darcy generalizada de Darcy es definida por la Equación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Darcy"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u}_{\alpha}=-\mathbf{K}\frac{k_{r\alpha}}{\mu_{\alpha}}\nabla p_{\alpha}\label{eq:Darcy}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En flujo bifásico podemos expresar el flujo total como la suma de los flujos
+ de las fases como se muestra en la Equación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:SumaDeFases"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{t}=}\mathbf{u_{o}+u_{w}}\label{eq:SumaDeFases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Donde los subíndices 
+\begin_inset Quotes eld
+\end_inset
+
+o
+\begin_inset Quotes erd
+\end_inset
+
+ y 
+\begin_inset Quotes eld
+\end_inset
+
+w
+\begin_inset Quotes erd
+\end_inset
+
+ se refieren al petróleo y al agua respectivamente.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang english
+Trazador pasivo
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\text{\ensuremath{\text{\ensuremath{\mu_{\alpha}=\text{\ensuremath{\mu_{\beta}}}}}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\rho_{\alpha}=\rho_{\beta}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p_{o}-p_{w}=p_{cwo}(s_{w})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p_{o}=p_{w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{o}=-}K\frac{k_{ro}}{\text{\ensuremath{\mu_{o}}}}\nabla(p_{o}-\rho gz)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{w}=-}K\frac{k_{rw}}{\text{\ensuremath{\mu_{w}}}}\nabla(p_{w}-\rho gz)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Despreciando los efectos 
+\color blue
+gravitatorios en la ecuación a
+\color inherit
+, b, y reemplazando en la ecuación c, se obtiene.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{t}=-}K\nabla p(\frac{k_{ro}}{\text{\ensuremath{\mu_{o}}}}+\frac{k_{rw}}{\text{\ensuremath{\mu_{w}}}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El modelo de permeabilidad relativa lineal indica que: 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+k_{ro}=s_{o}=1-s_{w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k_{w}=s_{w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Por lo tanto, reemplazando la ecuación m en la ecuación n, se obtiene:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{t}=-}K\nabla p(\frac{1-s_{w}}{\text{\ensuremath{\mu_{o}}}}+\frac{s_{w}}{\text{\ensuremath{\mu_{w}}}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Obteniendo la ecuación f
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{t}=-}K\nabla p
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot(\mathbf{u_{w}})=-\frac{\partial(\phi s_{w})}{\partial t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Considerando el concepto del flujo fraccional, donde: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{w}=\frac{\mathbf{u_{w}}}{\mathbf{u_{t}}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{w}=\frac{-K\frac{k_{rw}}{\mu_{w}}\nabla p}{-K\frac{1}{\mu}\nabla p}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Por lo tanto, 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+fw=k_{rw}=s_{w}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Reemplazando la ecuación nn en la ecuación mn, se obtiene:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot(s_{w}\mathbf{u_{t}})=\frac{-\delta(\phi s_{w})}{\delta t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Aplicando el método de los elementos finitos en la ecuación mn.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\int_{\Omega}\nabla\cdot(s_{w}\mathbf{u_{\mathbf{t}}})d\Omega=\int_{\Omega}\frac{-\delta(\phi s_{w})}{\delta t}d\Omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Empleando el teorema del divergente en la ecuación mn, se obtiene: 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\int_{\Gamma}s_{w}\mathbf{u_{t}}\cdot nd\Gamma=-\phi\int_{\Omega}\frac{\Delta s_{w}}{\Delta t}d\Omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Despejando 
+\begin_inset Formula $\Delta s_{w}$
+\end_inset
+
+, y empleando el Método de Euler, la ecuación anterior se puede expresar
+ de la siguiente forma:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\frac{\Delta t}{\phi}\int_{\Gamma}s_{w}\mathbf{u_{t}\cdot}nd\Gamma=-\int_{\Omega}s_{w}^{n+1}d\Omega+\int_{\Omega}s_{w}^{n}d\Omega
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Despejando 
+\begin_inset Formula $s_{w}^{n+1}$
+\end_inset
+
+, se obtiene:
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\int_{\Omega}s_{w}^{n+1}d\Omega=\int_{\Omega}s_{w}^{n}d\Omega-\frac{\Delta t}{\phi}\int_{\Gamma}s_{w}\mathbf{u_{t}}\cdot nd\Gamma
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\lang english
+Upwind
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+s_{wl}si\mathbf{u}\cdot n>0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+s_{wr}si\mathbf{u}\cdot n<0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+En este trabajo es considerado  upwind de primer orden
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+(En la siguiente ecuación se desprecian las densidades debido a que las
+ fases son incompresibles)
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\nabla\cdot(\rho_{\alpha}\mathbf{u_{\alpha}})=-\frac{\delta(\phi\rho_{\alpha}s_{\alpha})}{\delta t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Las ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:kro_no_linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:krw_no_linear"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, corresponden a 
+\begin_inset Formula $k_{ro}$
+\end_inset
+
+y 
+\begin_inset Formula $k_{rw}$
+\end_inset
+
+ considerando modelos de permeabilidad no linear.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+k_{ro}=(1-s_{w})^{n}\label{eq:kro_no_linear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+k_{rw}=s_{w}^{n}\label{eq:krw_no_linear}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entonces, 
+\begin_inset Formula $\mathbf{u_{w}}$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathbf{u_{o}}$
+\end_inset
+
+ se calculan utilizando la ecuaciones 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:krw_nolinear1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ y 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:kro_nolinear1"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ respectivamente.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{w}=-\frac{K}{\mu}}(1-s_{w})^{n}\label{eq:krw_nolinear1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{o}=-\frac{K}{\mu}}s_{w}^{n}\label{eq:kro_nolinear1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Consecuentemente, 
+\begin_inset Formula $\mathbf{u_{t}}$
+\end_inset
+
+ está dado por la siguiente ecuación 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{u_{t}=-\frac{K}{\mu}}[(1-s_{w})^{n}+s_{w}^{n}]\nabla p
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Entonces, 
+\begin_inset Formula $f_{w}$
+\end_inset
+
+ considerando permeabilidades relativas no lineares se muestra en la ecuación
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\mathbf{}=
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula 
+\begin{equation}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Ecuación de conservación de masa)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial}{\mathbf{\partial}t}(\rho_{o}\phi s_{o}+\rho_{w}\phi s_{w})+\nabla\cdot(\rho_{o}\mathbf{u_{o}+\rho_{w}\mathbf{u_{w}}})=0\label{eq:eq-inicial}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Considerando que 
+\begin_inset Formula $\rho_{o}=\rho_{w}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho\phi\frac{\partial}{\mathbf{\partial}t}(s_{o}+s_{w})=0\label{eq:equestion}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Segundo término de la ecuación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:eq-inicial"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, corresponde al flujo total y está dado por la siguiente ecuación 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\rho\nabla\cdot(\mathbf{u_{o}+\mathbf{u_{w}}})=0\label{eq: flujo total}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{titlepage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
