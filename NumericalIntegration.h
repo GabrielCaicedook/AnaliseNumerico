@@ -74,7 +74,8 @@ public:
             if (ftype == 3) {
                 
                 
-                auto solAreas = IntegrateGauss(a, b, fnreffs[i], 4);
+                auto solAreas = IntegrateGauss(a, b, fnreffs[i], 4
+                                               );
                 fAllhs[i] = Hreturn(a, b, fnreffs[i]);
              //   ValExact(a, b, fnreffs[i]);
 //                for (int isol=0; isol< fsol.size(); isol++) {
