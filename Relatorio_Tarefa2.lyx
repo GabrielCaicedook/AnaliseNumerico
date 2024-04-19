@@ -1168,15 +1168,6 @@ nel=2^{nref}
 \end_layout
 
 \begin_layout Standard
-Donde: 
-\end_layout
-
-\begin_layout Standard
-nref es número de veces que se refina el dominio.
- 
-\end_layout
-
-\begin_layout Standard
 TASA DE CONVERGENCIA
 \end_layout
 
@@ -4857,7 +4848,7 @@ nref
 \begin_inset Text
 
 \begin_layout Plain Layout
-sol.
+aasol.
  exácta
 \end_layout
 
