@@ -19,7 +19,7 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 
 
-add_executable( AnaliseNumerico main.cpp ${common_sources} ${common_headers} )
+add_executable( Galerkin GalerkinTest.cpp ${common_sources} ${common_headers} )
 
 
 
@@ -27,7 +27,7 @@ add_executable( AnaliseNumerico main.cpp ${common_sources} ${common_headers} )
 
 
 
-target_link_libraries(AnaliseNumerico ${Boost_LIBRARIES})
+target_link_libraries(Galerkin ${Boost_LIBRARIES})
 
 
 

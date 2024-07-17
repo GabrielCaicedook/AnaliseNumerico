@@ -5,7 +5,7 @@
 //  Created by Gabriel Caicedo on 7/04/24.
 //
 
-#include "ExactIntegration.hpp"
+#include "Galerkin.h"
 
 ExactIntegration::ExactIntegration(){
 }
